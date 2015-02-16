@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       # else
       #   forget(user)
       # end
-      redirect_to user
+      redirect_back_or user
   	else
   		flash.now[:danger] = 'Invalid email/password combination' # Not quite right!
   		render 'new'
