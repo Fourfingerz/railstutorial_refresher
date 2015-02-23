@@ -1,0 +1,12 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<!-- will_paginate looks for @user object, displays pagination links to access other pages -->
+
+<ul class="users">
+	<%= render @users %>
+</ul>
+
+<%= will_paginate %>
