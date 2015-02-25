@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	user = User.find_by(email: params[:session][:email].downcase)
+  	user = User.find_by(email: params[:session][:email])
   		# Pulls user out of DB by email. Matches downcased emails.
   	if user && user.authenticate(params[:session][:password])
   		# && determines if user is valid
