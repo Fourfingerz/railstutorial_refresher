@@ -67,7 +67,7 @@ Rails.application.configure do
   host = 'hartlfakeapp.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :addresses      => 'smtp.sendgrid.net',
+    :address      => 'smtp.sendgrid.net',
     :port           => '587',
     :domain         => 'heroku.com',
     :authentication => :plain,
